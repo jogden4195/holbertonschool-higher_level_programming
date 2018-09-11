@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 
 last_digit = int(str(number)[-1])
 if number < 0:
-	last_digit = last_digit * -1
+    last_digit = last_digit * -1
 
 str_to_print = "Last digit of {:d} is {:d} ".format(number, last_digit)
 
@@ -15,4 +15,4 @@ elif last_digit == 0:
 else:
     str_to_print += "and is less than 6 and not 0"
 
-print(str_to_print)
+print("{}".format(str_to_print))
