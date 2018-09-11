@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def uppercase(str):
     for c in str:
         letter = ord(c)
@@ -6,3 +5,4 @@ def uppercase(str):
             letter -= 32
         print("{}".format(chr(letter)), end="")
     print("")
+    return None
