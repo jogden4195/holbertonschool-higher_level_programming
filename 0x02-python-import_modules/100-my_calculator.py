@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 from calculator_1 import add, sub, div, mul
 
 if __name__ == "__main__":
 
-    if len(sys.argv) != 4:
+    if len(argv[1:]) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
-    op = sys.argv[2]
+    a = int(argv[1])
+    b = int(argv[3])
+    op = argv[2]
     valid = ["+", "-", "*", "/"]
 
     if op not in valid:
