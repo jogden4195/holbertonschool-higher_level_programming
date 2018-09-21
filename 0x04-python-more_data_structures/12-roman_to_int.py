@@ -22,6 +22,5 @@ def roman_to_int(roman_string):
             else:
                 total -= current
                 i += 1
-            print(total)
     total += values[my_str[-1]]
     return total
