@@ -23,4 +23,4 @@ def roman_to_int(roman_string):
                 total -= current
                 i += 1
     total += values[my_str[-1]]
-    return total
+    return abs(total)
