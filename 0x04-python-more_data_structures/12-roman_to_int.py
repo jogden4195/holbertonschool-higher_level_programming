@@ -14,18 +14,14 @@ def roman_to_int(roman_string):
         }
         i = 0
         while i < len(my_str) - 1:
-            if i == 0:
-                if values[my_str[0]] >= values[my_str[i + 1]]:
-                    total += values[my_str[0]]
-                else:
-                    total -= values[my_str[0]]
-                i += 1
-            elif values[my_str[i]] >= values[my_str[i + 1]]:
-                total += values[my_str[i]]
+            current = values[my_str[i]]
+            next_num = values[my_str[i + 1]]
+            if current >= next_num:
+                total += current
                 i += 1
             else:
-                while values[my_str[i]] <= values[my_str[i + 1]]:
-                    total -= values[my_str[i]]
-                    i += 1
+                total -= current
+                i += 1
+            print(total)
     total += values[my_str[-1]]
     return total
