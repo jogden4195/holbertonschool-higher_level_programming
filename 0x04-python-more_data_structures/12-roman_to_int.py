@@ -13,6 +13,8 @@ def roman_to_int(roman_string):
             'M': 1000
         }
         i = 0
+        if len(my_str) == 1:
+            return (values[my_str[i]])
         while i < len(my_str) - 1:
             current = values[my_str[i]]
             next_num = values[my_str[i + 1]]
@@ -22,5 +24,5 @@ def roman_to_int(roman_string):
             else:
                 total -= current
                 i += 1
-    total += values[my_str[-1]]
+        total += values[my_str[-1]]
     return abs(total)
