@@ -18,7 +18,7 @@ class Square:
             raise TypeError("size must be an integer")
         if type(position) is tuple:
             for i in position:
-                if type(i) is not int:
+                if type(i) is not int or i < 0:
                     raise TypeError(
                         "position must be a tuple of 2 positive integers")
             if len(position) != 2:
