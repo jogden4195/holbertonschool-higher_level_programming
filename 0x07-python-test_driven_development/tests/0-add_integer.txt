@@ -1,0 +1,34 @@
+``add_integer`` Function
+========================
+
+Using ``add_integer``
+_____________________
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Now testing:
+
+    Adding two ints:
+    >>> add_integer(1, 2)
+    3
+
+    Adding one int and one float:
+    >>> add_integer(1, 2.0)
+    3
+
+    Adding two floats:
+    >>> add_integer(1.0, 2.0)
+    3
+
+    Excluding b:
+    >>> add_integer(2)
+    100
+
+    Adding one int and one invalid parameter:
+    >>> add_integer(1, "hey")
+    Traceback (most recent call last):
+     ...
+    TypeError: b must be an integer
+    >>> add_integer("hey", 2) 
+    Traceback (most recent call last):
+     ...
+    TypeError: a must be an integer
