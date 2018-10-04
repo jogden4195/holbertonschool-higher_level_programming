@@ -1,0 +1,37 @@
+The ``say_my_name`` function
+============================
+
+Using ``say_my_name``
+---------------------
+
+First import the ``say_my_name`` function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+And now you are ready to use the function!
+
+    >>> say_my_name("Alphonse", "Elric")
+    My name is Alphonse Elric
+
+    >>> say_my_name("Edward", "Elric")
+    My name is Edward Elric
+
+    >>> say_my_name("Winry", "Rockbell")
+    My name is Winry Rockbell
+
+    >>> say_my_name("Scar")
+    My name is Scar 
+
+Now for some tests!
+
+    Wrong type for first_name:
+    >>> say_my_name(1)
+    Traceback (most recent call last):
+     ...
+    TypeError: first_name must be a string
+
+    Wrong type for last_name:
+    >>> say_my_name("Nina", 1)
+    Traceback (most recent call last):
+     ...
+    TypeError: last_name must be a string
