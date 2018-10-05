@@ -50,3 +50,19 @@ Now let's do some tests!
     >>> text_indentation("\n")
     <BLANKLINE>
 
+    "\n."
+    >>> text_indentation("\n.")
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+    >>> text_indentation(" A ")
+    A
+
+    >>> text_indentation("...")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
