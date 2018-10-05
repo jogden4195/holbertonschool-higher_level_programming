@@ -1,0 +1,52 @@
+The ``text_indentation`` Module
+===============================
+
+Using ``text_indentation``
+--------------------------
+
+First import the module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now you are ready to use the function
+    >>> text_indentation("""Three, six, nine damn she fine hopin she can sock it to me one mo time?Get low, Get low:Get low, Get low.To the window, to the wall,To the sweat drop down my b***s:To all these b****s crawl?To all skeet skeet mother***er all skeet skeet got dam.To all skeet skeet motherf**er all skeet skeet got dam""")
+    Three,
+    <BLANKLINE>    
+    six,
+    <BLANKLINE>
+    nine damn she fine hopin she can sock it to me one mo time?
+    <BLANKLINE>
+    Get low,
+    <BLANKLINE>
+    Get low:
+    <BLANKLINE>
+    Get low,
+    <BLANKLINE>
+    Get low.
+    <BLANKLINE>
+    To the window,
+    <BLANKLINE>
+    to the wall,
+    <BLANKLINE>
+    To the sweat drop down my b***s:
+    <BLANKLINE>
+    To all these b****s crawl?
+    <BLANKLINE>
+    To all skeet skeet mother***er all skeet skeet got dam.
+    <BLANKLINE>
+    To all skeet skeet motherf**er all skeet skeet got dam
+
+Now let's do some tests!
+
+
+    Give an empty string:
+    >>> text_indentation("")
+
+    "Wassup        ?    "
+    >>> text_indentation("Wassup	   ?	")
+    Wassup           ?
+    <BLANKLINE>    
+
+    "\n"
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
