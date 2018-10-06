@@ -16,7 +16,7 @@ def text_indentation(text):
     """
     print_str = ""
     for i in text:
-        if i is "." or i is "," or i is "?" or i is ":":
+        if i is "." or i is "?" or i is ":":
             print_str += i
             print(print_str.strip(" ") + '\n')
             print_str = ""
