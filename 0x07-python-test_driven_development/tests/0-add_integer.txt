@@ -33,12 +33,13 @@ Now testing:
      ...
     TypeError: a must be an integer
 
+    >>> import math
     >>> add_integer(((2 ** 10000) * .1), 2.4381348148914781438)
     Traceback (most recent call last):
      ...
     OverflowError: int too large to convert to float
 
-    >>> add_integer(float('NaN'), 2.4381348148914781438)
+    >>> add_integer(float('nan'), 2.4381348148914781438)
     Traceback (most recent call last):
      ...
     ValueError: cannot convert float NaN to integer
