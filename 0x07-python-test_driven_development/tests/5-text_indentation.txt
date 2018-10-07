@@ -54,3 +54,8 @@ Now let's do some tests!
     <BLANKLINE>
     .
     <BLANKLINE>
+
+    >>> text_indentation(456)
+    Traceback (most recent call last):
+     ...
+    TypeError: text must be a string
