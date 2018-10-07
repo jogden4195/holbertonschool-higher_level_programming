@@ -1,5 +1,5 @@
-``add_integer`` Function
-========================
+The ``add_integer`` Function
+============================
 
 Using ``add_integer``
 _____________________
@@ -32,3 +32,13 @@ Now testing:
     Traceback (most recent call last):
      ...
     TypeError: a must be an integer
+
+    >>> add_integer(((2 ** 10000) * .1), 2.4381348148914781438)
+    Traceback (most recent call last):
+     ...
+    OverflowError: int too large to convert to float
+
+    >>> add_integer(float('NaN'), 2.4381348148914781438)
+    Traceback (most recent call last):
+     ...
+    ValueError: cannot convert float NaN to integer
