@@ -29,7 +29,6 @@ Now you are ready to use the function!
     ##########
 
     >>>	print_square(0)
-    <BLANKLINE>
 
     >>>	print_square(1)
     #
@@ -47,4 +46,8 @@ Now for some tests!
      ...
     TypeError: size must be an integer
 
-    
+    Give no argument:
+    >>> print_square()
+    Traceback (most recent call last):
+     ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
