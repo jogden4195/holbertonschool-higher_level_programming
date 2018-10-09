@@ -3,6 +3,7 @@ class Rectangle:
     """ Rectangle - Defines a rectangle"""
     number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """ __init__ - initializes the rectangle
 
@@ -74,9 +75,9 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         """ bigger_or_smaller - returns the biggest rectangle """
         if type(rect_1) is not Rectangle:
-           raise TypeError("rect_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
-           raise TypeError("rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() > rect_2.area() or rect_1.area() == rect_2.area():
             return rect_1
         return rect_2
