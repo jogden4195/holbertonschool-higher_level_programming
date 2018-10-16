@@ -1,0 +1,33 @@
+The "BaseGeometry" Class
+========================
+
+Using "BaseGeometry"
+--------------------
+
+First import the Class:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now initialize it:
+    >>> bg = BaseGeometry()
+
+Now give integer_validator arguments:
+    >>> bg.integer_validator("my_int", 12)
+
+Now another one:
+    >>> bg.integer_validator("width", 89)
+
+Now lets give it some invalid values:
+    >>> bg.integer_validator("Hi!", -2)
+    Traceback (most recent call last):
+     ...
+    ValueError: Hi! must be greater than 0
+
+    >>> bg.integer_validator("Herro", 0)
+    Traceback (most recent call last):
+     ...
+    ValueError: Herro must be greater than 0
+
+    >>> bg.integer_validator("not a number", "a")
+    Traceback (most recent call last):
+     ...
+    TypeError: not a number must be an integer
