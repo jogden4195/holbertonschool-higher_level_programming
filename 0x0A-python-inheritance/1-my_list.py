@@ -3,7 +3,7 @@
 
 
 class MyList(list):
-    """ MyList - defines a list 
+    """ MyList - defines a list
 
     Modules:
         print_sorted: prints the list
