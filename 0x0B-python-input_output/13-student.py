@@ -28,4 +28,5 @@ class Student:
 
     def reload_from_json(self, json):
         """ reload_from_json - replaces all attrs of the Student """
-        self.__dict__ = json
+        for key in json:
+            self.__dict__.update({key: json.get(key)})
