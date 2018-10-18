@@ -6,14 +6,14 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ __init__ - initializes a rectangle """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, size):
@@ -26,7 +26,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, size):
@@ -39,7 +39,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, coord):
@@ -66,3 +66,13 @@ class Rectangle(Base):
     def area(self):
         """ area - returns the area value of the Rectangle instance """
         return (self.__width * self.__height)
+
+    def display(self):
+        """ display - prints the rectangle with '#' characters """
+        row = ('#' * self.__width) + '\n'
+        print(row * self.__height, end="")
+
+    def __str__(self):
+        """ __str__ - returns a informal description of the class """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
