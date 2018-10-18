@@ -69,8 +69,8 @@ class Rectangle(Base):
 
     def display(self):
         """ display - prints the rectangle with '#' characters """
-        row = ('#' * self.__width) + '\n'
-        print(row * self.__height, end="")
+        row = (' ' * self.__x) + ('#' * self.__width) + '\n'
+        print(('\n' * self.__y) + (row * self.__height), end="")
 
     def __str__(self):
         """ __str__ - returns a informal description of the class """
