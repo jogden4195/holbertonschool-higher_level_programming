@@ -76,3 +76,23 @@ class Rectangle(Base):
         """ __str__ - returns a informal description of the class """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """ update - assigns an argument an argument to each attr """
+        i = 0
+        for arg in args:
+            if i == 0:
+                self.id = arg
+                i += 1
+            elif i == 1:
+                self.__width = arg
+                i += 1
+            elif i == 2:
+                self.__height = arg
+                i += 1
+            elif i == 3:
+                self.__x = arg
+                i += 1
+            elif i == 4:
+                self.__y = arg
+                i += 1
