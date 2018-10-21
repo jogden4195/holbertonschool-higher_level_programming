@@ -56,3 +56,10 @@ class Square(Rectangle):
                 elif arg is "y":
                    self.y = kwargs.get(arg)
            
+    def to_dictionary(self):
+        sq_dict = {}
+        sq_dict['id'] = self.id
+        sq_dict['size'] = self.size
+        sq_dict['x'] = self.x
+        sq_dict['y'] = self.y
+        return sq_dict
