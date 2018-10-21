@@ -34,3 +34,10 @@ class Base:
                     list_o_dict.append(cls.to_dictionary(i))
                 text = cls.to_json_string(list_o_dict)
             a_file.write(text)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ from_json_string - returns list of JSON str rep """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
