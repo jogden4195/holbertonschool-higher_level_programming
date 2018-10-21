@@ -6,10 +6,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ __init__ - initializes a rectangle """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -109,3 +109,12 @@ class Rectangle(Base):
                     self.__x = kwargs.get(k)
                 elif k is "y":
                     self.__y = kwargs.get(k)
+
+    def to_dictionary(self):
+        rec_dict = {}
+        rec_dict['id'] = self.id
+        rec_dict['width'] = self.__width
+        rec_dict['height'] = self.__height
+        rec_dict['x'] = self.__x
+        rec_dict['y'] = self.__y
+        return rec_dict
