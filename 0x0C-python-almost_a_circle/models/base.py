@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module for Base class """
 import json
 from pathlib import Path
 
@@ -6,7 +7,7 @@ from pathlib import Path
 class Base:
     """ Base class - base of all other classes """
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """ __init__ - initializes the base class """
         if id is not None:
@@ -60,7 +61,7 @@ class Base:
         a_list = []
         if path_to_file.is_file():
             with open(filename, mode='r', encoding='utf-8') as a_file:
-               instances = cls.from_json_string(a_file.read())
-               for i in instances:
-                   a_list.append(cls.create(**i))
+                instances = cls.from_json_string(a_file.read())
+                for i in instances:
+                    a_list.append(cls.create(**i))
         return a_list

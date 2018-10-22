@@ -1,5 +1,7 @@
 #!/user/bin/python
+""" Module for Square class """
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """ Square class - a subclass of the rectangle class """
@@ -22,7 +24,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
-        
+
     def __str__(self):
         """ __str__ - prints a informal description of a square instance """
         return "[Square] ({}) {}/{} - {}".format(
@@ -48,14 +50,14 @@ class Square(Rectangle):
         elif kwargs is not {}:
             for arg in kwargs:
                 if arg == "id":
-                   self.id = kwargs.get(arg)
+                    self.id = kwargs.get(arg)
                 elif arg == "size":
-                   self.size = kwargs.get(arg)
+                    self.size = kwargs.get(arg)
                 elif arg == "x":
-                   self.x = kwargs.get(arg)
+                    self.x = kwargs.get(arg)
                 elif arg == "y":
-                   self.y = kwargs.get(arg)
-           
+                    self.y = kwargs.get(arg)
+
     def to_dictionary(self):
         sq_dict = {}
         sq_dict['id'] = self.id
