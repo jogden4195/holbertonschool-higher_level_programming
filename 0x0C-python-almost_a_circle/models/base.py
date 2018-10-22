@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+from pathlib import Path
 
 
 class Base:
@@ -51,3 +52,15 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = str(cls.__name__) + ".json"
+        path_to_file = Path(filename)
+        a_list = []
+        if path_to_file.is_file():
+            with open(filename, mode='r', encoding='utf-8') as a_file:
+               instances = cls.from_json_string(a_file.read())
+               for i in instances:
+                   a_list.append(cls.create(**i))
+        return a_list
