@@ -62,7 +62,7 @@ class Rectangle(Base):
         if type(coord) is not int:
             raise TypeError("y must be an integer")
         if coord < 0:
-            raise ValueError("y must be >=0")
+            raise ValueError("y must be >= 0")
         self.__y = coord
 
     def area(self):
