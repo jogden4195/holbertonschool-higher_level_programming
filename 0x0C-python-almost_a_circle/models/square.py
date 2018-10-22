@@ -47,13 +47,13 @@ class Square(Rectangle):
                     i += 1
         elif kwargs is not {}:
             for arg in kwargs:
-                if arg is "id":
+                if arg == "id":
                    self.id = kwargs.get(arg)
-                elif arg is "size":
+                elif arg == "size":
                    self.size = kwargs.get(arg)
-                elif arg is "x":
+                elif arg == "x":
                    self.x = kwargs.get(arg)
-                elif arg is "y":
+                elif arg == "y":
                    self.y = kwargs.get(arg)
            
     def to_dictionary(self):

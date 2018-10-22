@@ -5,11 +5,11 @@ class Rectangle(Base):
     """ Rectangle class - class for rectangles"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """ __init__ - initializes a rectangle """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -98,17 +98,17 @@ class Rectangle(Base):
                     self.__y = arg
                     i += 1
         elif kwargs is not {}:
-            for k in kwargs:
-                if k is "id":
-                    self.id = kwargs.get(k)
-                elif k is "width":
-                    self.__width = kwargs.get(k)
-                elif k is "height":
-                    self.__height = kwargs.get(k)
-                elif k is "x":
-                    self.__x = kwargs.get(k)
-                elif k is "y":
-                    self.__y = kwargs.get(k)
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                elif k == "width":
+                    self.__width = v
+                elif k == "height":
+                    self.__height = v
+                elif k == "x":
+                    self.__x = v
+                elif k == "y":
+                    self.__y = v
 
     def to_dictionary(self):
         rec_dict = {}
