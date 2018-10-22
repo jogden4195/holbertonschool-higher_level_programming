@@ -58,9 +58,11 @@ class Base:
         """ load_from_file - returns a list of instances """
         filename = str(cls.__name__) + ".json"
         a_list = []
-        if (filename):
+        try:
             with open(filename, mode='r', encoding='utf-8') as a_file:
                 instances = cls.from_json_string(a_file.read())
                 for i in instances:
                     a_list.append(cls.create(**i))
-        return a_list
+            return a_list
+        except:
+            return a_list
