@@ -56,6 +56,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ load_from_file - returns a list of instances """
         filename = str(cls.__name__) + ".json"
         path_to_file = Path(filename)
         a_list = []
