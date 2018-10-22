@@ -113,6 +113,7 @@ class Rectangle(Base):
                     self.__y = v
 
     def to_dictionary(self):
+        """ to_dictionary - returns the dict rep of rectangle """
         rec_dict = {}
         rec_dict['id'] = self.id
         rec_dict['width'] = self.__width
