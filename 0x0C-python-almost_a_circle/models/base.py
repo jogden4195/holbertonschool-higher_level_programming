@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Module for Base class """
 import json
-from pathlib import Path
+#from pathlib import Path
 
 
 class Base:
@@ -58,7 +58,7 @@ class Base:
     def load_from_file(cls):
         """ load_from_file - returns a list of instances """
         filename = str(cls.__name__) + ".json"
-        path_to_file = Path(filename)
+       # path_to_file = Path(filename)
         a_list = []
         if path_to_file.is_file():
             with open(filename, mode='r', encoding='utf-8') as a_file:
