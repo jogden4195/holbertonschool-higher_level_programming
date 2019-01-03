@@ -16,7 +16,5 @@ if __name__ == "__main__":
     row = State(name="Louisiana")
     session.add(row)
     session.commit()
-    for state in session.query(State).order_by(State.id).all():
-        if state.name == "Louisiana":
-            print("{}".format(state.id))
+    print(row.id)
     session.close()
