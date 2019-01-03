@@ -8,14 +8,14 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     """Prints the first State object from the database hbtn_0e_6_usa"""
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        'mysql+mysqldb://{}:{}@localhost/{}'.format(
             sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        state = session.query(State).order_by(State.id).all()[0]
+        state = session.query(State).order_by(State.id).first()
         print("{}: {}".format(state.id, state.name))
         session.close()
     except:
