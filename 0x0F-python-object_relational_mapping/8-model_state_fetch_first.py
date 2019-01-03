@@ -4,7 +4,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm.exc import NoResultFound
+
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -18,6 +18,6 @@ if __name__ == "__main__":
         state = session.query(State).order_by(State.id).all()[0]
         print("{}: {}".format(state.id, state.name))
         session.close()
-    except NoResultFound:
+    except:
         print("Nothing")
         session.close()
