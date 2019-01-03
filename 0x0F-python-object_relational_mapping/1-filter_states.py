@@ -16,6 +16,6 @@ if __name__ == "__main__":
         """SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id""")
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        print('{}'.format(row))
     cur.close()
     conn.close()
