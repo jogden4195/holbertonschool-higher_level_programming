@@ -7,6 +7,7 @@ def find_peak(list_of_integers):
     Return: peak of the list
     """
     if list_of_integers != []:
-        sorted_list = list_of_integers.sort()
-        return sorted_list[-1]
-    return None
+        list_of_integers.sort()
+        return list_of_integers[-1]
+    else:
+        return None
