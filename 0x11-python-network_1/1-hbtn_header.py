@@ -10,4 +10,4 @@ url = sys.argv[1]
 res = urllib.request.urlopen(url)
 with res as response:
     html = dict(response.info())
-print(html['X-Request-Id'])
+print(html.get('X-Request-Id'))
