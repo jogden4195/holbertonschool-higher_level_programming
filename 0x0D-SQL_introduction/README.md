@@ -15,6 +15,7 @@ At the end of this project you are expected to be able to explain to anyone, *wi
 
 ## Files
 | File Name | Description |
+| --------- | ----------- |
 | 0-list_databases.sql | Script that lists all databases of your MySQL server |
 | 1-create_database_if_missing.sql | Script that creates the database hbtn_0c_0 in your MySQL server |
 | 2-remove_database.sql | Script that deletes the database hbtn_0c_0 in your MySQL server |
