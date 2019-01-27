@@ -28,3 +28,6 @@ At the end of this project you are expected to be able to explain to anyone, wit
 | Create a new sentence | Python script that prints out `object-oriented programming with Python`, followed by a new line. | 8-concat_edges.py |
 | Easter Egg | Python scipt that prints “The Zen of Python”, by TimPeters, followed by a new line. | 9-easter_egg.py |
 | Linked list cycle | Function in C that checks if a singly linked list has a cycle in it. | 10-check_cycle.c, lists.h |
+
+## Author
+Jenn Ogden
