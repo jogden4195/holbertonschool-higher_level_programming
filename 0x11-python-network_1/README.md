@@ -23,3 +23,6 @@ At the end of this project, you expected to be able to explain to anyone, *witho
 | 8-json_api.py | Search API | Takes in a letter and sends a `POST` request to `http://0.0.0.0:5000/search_user` with the letter as a parameter |
 | 9-starwars.py | Star Wars API \#0 | Takes in a string and sends a search request to the Star Wars API |
 | 10-my_github.py | My Github! | Takes your Github credentials (username and password) and uses the Github API to display your `id` |
+
+## Author
+Jenn Ogden

@@ -25,3 +25,11 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * What is `*args` and how to use it
 * What is `**kwargs` and how to use it
 * How to hangle named arguments in a function
+
+## Files
+| File Name | Task Name | Description |
+| --------- | --------- | ----------- |
+| models | N/A | Contains the Base, Rectangle, and Square classes |
+
+## Author
+Jenn Ogden

@@ -21,3 +21,6 @@ At the end of this project you are expected to be able to explain to anyone, wit
 | Build my own calculator! | Python program that imports all functions from the file `calculator_1.py` | 100-my_calculator.py |
 | Easy print | Python program that prints `#pythoniscool`, followed by a new line, in the standard output. | 101-easy_print.py, print_easy.py |
 | Fast alphabet | Python program that prints the alphabet in uppercase, followed by a new line. | 103-fast_alphabet.py |
+
+## Author
+Jenn Ogden

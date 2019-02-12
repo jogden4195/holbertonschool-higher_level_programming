@@ -37,3 +37,6 @@ At the end of this project you are expected to be able to explain to anyone, wit
 | a^b | Python function that computes `a` to the power of `b` and returns the value | 11-pow.py |
 | Fizz Buzz | Function that prints the numbers from 1 to 100 seperated by a space | 12-fizzbuzz.py |
 | Insert in sorted linked list | C function that inserts a number into a sorted singly linked list | 13-insert_number.c, lists.h |
+
+## Author
+Jenn Ogden
