@@ -13,9 +13,12 @@ if (process.argv.length < 4) {
   }
   let i = 4;
   while (i < process.argv.length) {
-    if (parseInt(process.argv[i]) > biggest) {
+    let current = parseInt(process.argv[i]);
+    if (current > biggest) {
       secBig = biggest;
-      biggest = process.argv[i];
+      biggest = current;
+    } else if (current < biggest && current > secBig) {
+      secBig = current;
     }
     ++i;
   }
