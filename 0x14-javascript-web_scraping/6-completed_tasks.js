@@ -11,11 +11,11 @@ request(url, function (err, res, body) {
     let tasks = JSON.parse(body);
     let workers = {};
     for (let i in tasks) {
-      let uid = tasks[i]['userId'];
-      if (Object.keys(workers).includes(uid.toString()) === false) {
-        workers[uid] = 0;
-      }
       if (tasks[i]['completed'] === true) {
+        let uid = tasks[i]['userId'].toString();
+        if (Object.keys(workers).includes(uid) === false) {
+          workers[uid] = 0;
+        }
         let count = workers[uid];
         workers[uid] = ++count;
       }
