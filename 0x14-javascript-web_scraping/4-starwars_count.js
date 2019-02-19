@@ -10,10 +10,11 @@ request(swapi, function (err, res, body) {
   } else {
     let films = JSON.parse(body).results;
     let count = 0;
-    let wedge = 'https://swapi.co/api/people/18/';
     for (let i in films) {
-      if (films[i]['characters'].includes(wedge) === true) {
-        ++count;
+      for (let j in films[i]['characters']) {
+        if (films[i]['characters'][j].includes('18/') === true) {
+          ++count;
+        }
       }
     }
     console.log(count);
